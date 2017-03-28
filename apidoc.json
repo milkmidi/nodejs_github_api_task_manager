@@ -1,0 +1,9 @@
+{
+    "name": "github.medialand.tw",
+    "version": "0.1.0",
+    "description": "互動部門排程系統 API, 參考 Google API Response 的格式 , 小寫 + 底線 ",
+    "apidoc": {
+        "title": "Custom apiDoc browser title",
+        "url": "http://github.medialand.tw/api/"        
+    }
+}

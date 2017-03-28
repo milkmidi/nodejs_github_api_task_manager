@@ -1,0 +1,60 @@
+//////////////////////////////////////////////////////////////////////////////
+以下為奶綠筆記
+db.task.aggregate([
+    {
+        $match : {
+            user: 2
+        }
+    },
+    {
+        $lookup:{
+            from:"user",
+            localField:"user",
+            foreignField:"u_id",
+            as:"userData"
+        }
+    }
+])
+
+
+db.USER.aggregate([    
+    {
+        $lookup:{
+            from:"DEPARTMENT",
+            localField:"department",
+            foreignField:"d_id",
+            as:"department"
+        }
+    },
+    {
+        $project:{
+            _id:0,
+            name:1,            
+            department:{
+                $arrayElemAt:["$department.name",0]
+            }
+        }
+    }    
+])
+
+db.TASK.aggregate([    
+    {
+        $lookup:{
+            from:"USER",
+            localField:"user",
+            foreignField:"u_id",
+            as:"user_data"
+        }
+    },
+     {
+        $project:{
+            _id:0,
+            name:1,            
+            u_id:1,
+            user_data:{
+                $arrayElemAt:["$user_data.name",0]
+            }
+        }
+    }
+    
+])

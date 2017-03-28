@@ -1,0 +1,101 @@
+html,body,#app
+	width 100%
+	min-height 100vh !important
+	
+body
+	font-family: "微軟正黑體"
+.view	
+	min-height: calc(100% - 68px);
+
+
+.fade-enter-active, .fade-leave-active 
+	transition: all .5s
+
+.fade-enter, .fade-leave-active 
+	opacity: 0
+
+.router-enter-active, .router-leave-active 
+	transition: all .5s
+
+.router-enter, .router-leave-active 
+	opacity: 0
+	transform-origin: 0 0	
+	transform: translateX(20px)
+
+
+
+.z-depth-0
+	box-shadow: none !important
+.z-depth-1
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2)
+.z-depth-1-half
+	box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2)
+.z-depth-2
+	box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3)
+.z-depth-3
+	box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3)
+.z-depth-4
+	box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3)
+.z-depth-5
+	box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3)
+
+.test
+	color red
+	font-size 20px
+
+userColor( name , color )
+	body.{name}
+		.user-color
+			transition background-color 0.3s;
+			background-color color !important
+	
+
+// userColor('milkmidi' , red);
+// userColor('Ash' , #aabbcc);
+.is-primary{
+	background-color: #00d1b2;
+}
+.hero {  
+	align-items: stretch;
+  	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	.hero-body {
+		flex-grow: 1;  
+      	flex-shrink: 0;
+  		padding: 40px 20px;
+	}
+}
+.section {
+	padding: 40px 20px;
+}
+
+// .date_format
+	// margin: 5px 0	
+.date_format_month
+.date_format_date
+	// font-weight: bold
+	font-size 20px
+
+
+
+userColor = {
+	Jason 	:#1abc9c ,
+	milkmidi:#3498db ,
+	Ash     :#9b59b6,
+	MarkVann:#f1c40f,
+	Sherwin :#e67e22,
+	Scars   :#ecf0f1,
+	Andy 	:#9b59b6
+	Mike    :#d35400,
+	Walter  :#7f8c8d,
+}
+
+.user_color
+	for key,value in userColor
+		&.{key}
+			// background-color lightness(value, 70%) !important
+			border-color: value;
+			// background-color saturation(value, 40%) !important
+			// box-shadow 0 0 0 1px #D4D4D5, 0 5px 0 0 lightness(value, 50%), 0 1px 3px 0 #D4D4D5 !important
+	

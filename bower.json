@@ -1,0 +1,17 @@
+{
+  "name": "github.medialand.tw",
+  "description": "ml github",
+  "main": "index.js",
+  "authors": [
+    "milkmidi"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/MedialandDev/2016_07_github_api_node_js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

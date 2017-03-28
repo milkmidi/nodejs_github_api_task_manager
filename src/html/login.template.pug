@@ -1,0 +1,24 @@
+doctype
+html
+    head
+        meta(charset='UTF-8')
+        title github.medialand.tw
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        meta(property="og:title" content="github.medialand.tw")
+        meta(property="og:description" content="github.medialand.tw")
+        meta(property="og:image" content="img/1200x630.png")
+        meta(name="google-signin-client_id" content="554917229066-bst96iq8q5n10l89tp6gf8chslqo359m.apps.googleusercontent.com")
+    body
+        .app.app-default
+            .app-container.app-login
+                .flex-center
+                    .app-body                       
+                        .app-form
+                            h2.kv medialand
+                            .text-center
+                                .g-signin2(data-onsuccess="onSignIn")                    
+        link(rel="stylesheet" href="asset/css/vendor.css")
+        link(rel="stylesheet" href="asset/css/flat-admin.css")
+        //- script(src="asset/js/vendor.js")
+        script(src='//cdnjs.cloudflare.com/ajax/libs/axios/0.15.3/axios.min.js')
+        script(src="https://apis.google.com/js/platform.js?onload=google_api_onload" async)
